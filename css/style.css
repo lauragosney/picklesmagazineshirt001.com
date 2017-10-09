@@ -1,0 +1,398 @@
+@font-face {
+    font-family: Geomanist Regular;
+    src: url("fonts/geomanist-regular.otf");
+}
+
+@font-face {
+  font-family: Geomanist Bold;
+  src: url("/fonts/geomanist-bold.otf"); 
+}
+
+body {
+	font-family: Geomanist;
+ 	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.8;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.menu {
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.06, 0.17, 0.2, 1);
+  z-index: 2;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.menu nav {
+  position: absolute;
+	text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+	/*here we position the top edge of the box 50% from the top of the container*/
+  top: 50%;
+	/* we use transform to move the nav up by 50% of the nav of its height,
+	which always stays relative to the size of our box */
+  transform: translateY(-50%);
+  z-index: 8;
+}
+
+.menu nav a {
+  font-size: 32px;
+  font-family: Geomanist;
+ 	font-weight: 700;
+	line-height: 1.5;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-100px);
+ 	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.open nav a:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.open nav a:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.open nav a:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.open nav a:nth-child(4) {
+    transition-delay: 0.5s;
+}
+
+.open nav a {
+    transform: translateX(0);
+    opacity: 1;
+  	transition: all 0.3s;
+  	border-bottom: 2px solid transparent;
+  	padding-bottom: 1px;
+}
+
+.open nav a:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+
+.menu-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+ 	padding: 25px;
+  width: 80px;
+  z-index: 8;
+}
+
+.menu-toggle .icon {
+  width: 40px;
+}
+
+
+.hero {
+ 	display: flex;
+ 	width: 100%;
+  height: 100vh;
+  justify-content: center;
+ 	align-items: center;
+  position: fixed;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 1s;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  width: 940px;
+}
+
+h2 {
+  font-family: Geomanist;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: Geomanist;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: Geomanist;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+
+}
+
+.body-text {
+  margin-top: 20px;
+}
+
+.divider {
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+section {
+    opacity: 0;
+    transform: translate(0, 20px);
+    transition: all 1.6s ease;
+}
+
+.shirt {
+  padding-top: 800px;
+  margin-bottom: 180px;
+}
+
+.history-left {
+  width: 33.33%;
+  padding-right: 40px;
+}
+
+.history-right {
+  width: 33.33%;
+  padding-left: 40px;
+}
+
+.history-middle {
+  width: 33.33%;
+  margin-top: 225px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.block-copy {
+  width: 45%;
+}
+
+.block-image-right {
+  width: 45%;
+  margin-left: 10%;
+}
+
+.block-image-left {
+  width: 45%;
+  margin-right: 10%;
+}
+
+.history-content,
+.detail,
+.mag,
+.stuff {
+  margin-bottom: 180px;
+}
+
+.fade {
+  opacity: 0.03;
+}
+
+.btn-primary a {
+  font-family: Geomanist;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn-primary  {
+ margin-top: 24px;
+ display: inline-block;
+}
+
+.btn-primary:hover .arrow {
+   transform: translate(5px,0);
+}
+
+.btn-primary:hover a{
+   color: #7ED321;
+}
+
+.arrow {
+  padding-left: 5px;
+ 	transition: all 0.3s ease-in-out;
+}
+
+.quote {
+  background-color: #000000;
+  padding: 40px;
+  margin-bottom: 180px;
+}
+
+.quote-container {
+  color: white;
+  text-align: center;
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-container h2 {
+  margin-bottom: 24px;
+}
+
+.rule {
+  width: 1px;
+  height: 30px;
+  background-color: #ffffff;
+  margin: 20px auto 20px auto;
+}
+
+.number {
+  font-size: 150px;
+  margin-left: -10px;
+  font-weight: 700;
+  line-height: 100px;
+  color: #88d337;
+}
+
+.history-copy {
+  margin-top: -32px;
+}
+
+footer {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 20px;
+  margin-top: 180px;
+}
+
+footer nav a {
+  width: 25px;
+  margin-right: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+footer nav a:first-child {
+  margin-left: 10px;
+}
+
+footer nav a:hover {
+  transform: scale(.8) ;
+  opacity: 0.3;
+}
+
+@media (max-width: 700px) {
+
+   .menu nav a {
+  	font-size: 24px;
+  }
+
+
+   h2 {
+    font-size: 32px;
+  }
+
+  .shirt {
+  	margin-bottom: 80px;
+	}
+
+  .history-content,
+  .detail,
+  .quote,
+  .mag {
+     margin-bottom: 80px;
+  }
+
+  .stuff {
+    margin-bottom: 60px;
+  }
+
+  .history-left,
+  .history-right,
+  .history-middle {
+  	width: 100%;
+    margin: 0 0 40px 0;
+    padding: 0;
+	}
+
+  footer {
+  	margin-top: 20px;
+    line-height: 1px;
+	}
+
+	footer nav a {
+  	width: 20px;
+  	margin-right: 15px;
+	}
+}
+
+@media (max-width: 534px) {
+
+  .container {
+  	display: flex;
+    flex-direction: column;
+	}
+
+   .shirt .container,
+   .mag .container {
+   	flex-direction: column-reverse;
+	}
+
+	.block-image-left,
+  .block-image-right,
+  .block-copy {
+   width: 100%;
+   margin-left: 0;
+   margin-right: 0;
+   padding-bottom: 40px;
+	}
+
+  .shirt {
+  	padding-top: 800px;
+  	margin-bottom: 30px;
+	}
+
+  footer {
+  	margin-top: 20px;
+    line-height: 1px;
+	}
+
+	footer nav a {
+  	width: 20px;
+  	margin-right: 15px;
+	}
+}
